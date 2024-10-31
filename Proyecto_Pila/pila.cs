@@ -51,8 +51,13 @@ namespace Proyecto_Pila
 
         public void PrintStack()
         {
-            nodo act = inicio;
+            if (Empty())
+            {
+                Console.WriteLine("La pila está vacía.");
+                return;
+            }
 
+            nodo act = inicio;
             Console.WriteLine("Elementos de la pila:");
             while (act != null)
             {
